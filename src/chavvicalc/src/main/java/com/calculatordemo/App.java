@@ -2,10 +2,23 @@ package com.calculatordemo;
 
 import java.util.*;
 
+import javax.lang.model.util.ElementScanner14;
+
 /*
  * chavvi calc calculator
  */
 public class App {
+
+  public static void additionFunction(double x, double y){
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Enter value for A: ");
+    double num1 = myObj.nextDouble();
+    System.out.println("Enter value for B: ");
+    double num2 = myObj.nextDouble();
+    myObj.close();
+  };
+
+
 
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
@@ -77,6 +90,19 @@ public class App {
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
         break;
+      case '+':
+        System.out.printf("%.3f + %.3f = %.3f", num1, num2,(num1+num2));
+      break;
+      case '-':
+        System.out.printf("%.3f - %.3f = %.3f", num1, num2,(num1-num2));
+        break;
+      case '*':
+        System.out.printf("%.3f * %.3f - %.3f",num1, num2,(num1*num2));
+      case '/':
+        if(num2 != 0)
+          System.out.printf("%.3f / %.3f = %.3f", num1, num2,(num1/num2));
+        else
+          System.out.println("Cannot divide by zero");
       default:
         System.out.println("ERROR: Unknown commmand");
         success = false;
@@ -84,4 +110,5 @@ public class App {
 
     return success;
   }
+
 }

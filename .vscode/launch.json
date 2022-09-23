@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch integerSumFunction",
+            "request": "launch",
+            "mainClass": "com.calculatordemo.integerSumFunction",
+            "projectName": "chavvicalc"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
